@@ -1,0 +1,136 @@
+
+:root{
+    --genearal-padding-mobile: 16px 2rem;
+    --genearal-padding: 8px 4rem;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: #222;
+    font-family: Helvetica, Arial, sans-serif;
+
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 1.6;
+}
+
+
+
+header{
+    background-color: #f9f9f9;
+    padding: var(--genearal-padding-mobile);
+}
+
+nav div.logo-and-name-wrapper a{
+    display: flex;
+}
+
+/* LOGO AND WEBSITE NAME */
+nav div a div.div-as-logo{
+    height: 20px;
+    width: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    margin-right: 8px;
+
+}
+
+/* MENU LINKS */
+nav div.menu-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+}
+nav div.menu-links ul li a:hover{
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+
+main{
+    padding: var(--genearal-padding-mobile);
+    margin-top: 1em;
+}
+
+main .section-1{
+    margin-bottom: 2rem;
+}
+
+main .section-1 h1{
+    font-weight: 200;
+}
+
+main .section-1 p{
+    padding-top: 2rem;
+}
+
+section.section-2 div{
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+
+    padding: 8px;
+    margin-bottom: 2rem;
+}
+section.section-2 div:hover{
+    box-shadow: -2px -2px 8px #888;
+}
+
+section.section-2 div a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.section-2 div a span{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    
+    border-radius: 5px;
+    margin: 0 1rem 0 0;
+}
+
+section.section-2 div a p{
+    color: #ccc;
+    letter-spacing: 1.2px;
+}
+
+
+/* STYLE BAR-CHART OF ONLY LOGIN PAGE  */
+div.login-page-barchart{
+    /* width: 200px;
+    height: 200px; */
+    color: teal;
+}
+
+footer{
+    background-color: #f1f1f1;
+}
+
+
+
+/* ----------------- MEDIA QUERIES-------------- */
+@media only screen and (min-width: 768px){
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav div ul li{
+        margin-right: 3rem;
+    }
+ 
+    main section{
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+

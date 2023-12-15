@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>OAuth using Google | <%= pageName %></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-and-name-wrapper">
+                <a href="#">
+                    <div class="div-as-logo"></div>
+                    <p>OAuth Using Google</p>
+                </a>
+            </div>
+            <div class="menu-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Page-2</a></li>
+                    <li><a href="#">Page-3</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section-1">
+            <h1>Hola! <%= user_info.displayName %></h1>
+            <h2>OAuth security using Google</h2>
+            <% if (user_info.picture) { %>
+                <img src="<%= user_info.picture %>" width="100px" height="100px" alt="Profile Picture"/>
+                <% } else { %>
+                    <i class="far fa-meh"></i>
+                <% } %>
+                <small>Your email is <b><%= user_info.emails[0].value %></b></small>
+                <p>This is a simple example of how to use OAuth with Google. Have fun testing the app.<br>Have a nice day.</p>
+        </section>
+        <section class="section-2">
+            <div class="redirect-link-wrapper create-new-user">
+                <a href="/register">
+                    <span class="fa fa-user-plus"></span>
+                    <p>Create New Account</p>
+                </a>
+            </div>
+            <div class="redirect-link-wrapper">
+                <a href="/logout">
+                    <span class="fa fa-sign-out"></span>
+                    <p>Log out</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <script src="../script.js"></script>
+    </footer>
+</body>
+</html>
